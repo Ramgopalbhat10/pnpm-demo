@@ -1,0 +1,38 @@
+{
+  "name": "api-gql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev src/index.ts",
+    "build": "pnpm i && pnpm dlx prisma generate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.8.2",
+    "prisma": "^4.4.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@graphql-yoga/node": "^2.13.13",
+    "@opentelemetry/api": "^1.2.0",
+    "@opentelemetry/resources": "^1.7.0",
+    "@opentelemetry/sdk-trace-base": "^1.7.0",
+    "@opentelemetry/sdk-trace-node": "^1.7.0",
+    "@opentelemetry/semantic-conventions": "^1.7.0",
+    "@pothos/core": "^3.22.5",
+    "@pothos/plugin-prisma": "^3.35.4",
+    "@prisma/client": "^4.4.0",
+    "fastify": "^4.7.0",
+    "graphql": "^16.6.0",
+    "graphql-scalars": "^1.18.0",
+    "graphql-yoga": "3.0.0-next.3"
+  },
+  "prisma": {
+    "seed": "pnpm exec ts-node-dev prisma/seed.ts"
+  }
+}
